@@ -1,0 +1,38 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+function Header() {
+    const links = [
+        <Link key="1" to={'#'} className=' font-medium'>Home</Link>,
+        <Link key="2" to={'#'} className=' font-medium'>Stations</Link>,
+        <Link key="3" to={'#'} className=' font-medium'>Contact</Link>,
+        <Link key="4" to={'#'} className=' font-medium'>About Us</Link>
+    ];
+
+    return (
+        <div className='bg-(--primary-color) fixed top-0 left-0 right-0 h-18 flex items-center px-4 sm:px-8 py-4 justify-between'>
+            <div>
+                <Link key="1" to={'#'} className='flex items-center hover:underline transition-all'>
+                    <img src="./src/assets/P2P-Logo.png" alt="" className='w-12' />
+                    <h5 className="font-bold text-xl text-nowrap">P2P BUS PH.</h5>
+                </Link>
+            </div>
+            <div>   
+                <div className='sm:hidden'>
+                    <div className='px-2 py-3 rounded border border-(--primary-color) hover:border-(--dark-color) active:bg-stone-600/10 transition-all'>
+                        <div className='w-7 h-5 flex flex-col justify-center gap-1'>
+                            <span className='w-full h-1 bg-stone-900'></span>
+                            <span className='w-full h-1 bg-stone-900'></span>
+                            <span className='w-full h-1 bg-stone-900'></span>
+                        </div>
+                    </div>
+                </div>
+                <div className='hidden gap-8 sm:flex'>
+                    {links} 
+                </div>       
+            </div>
+        </div>
+    )
+}
+
+export default Header
