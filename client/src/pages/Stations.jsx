@@ -5,7 +5,7 @@ import StationCard from '../components/StationCard.jsx';
 function Stations() {
   return (
     <>
-        <Header />
+        <Header active_nav={"Stations"} />
         
         <div className='flex items-center justify-between'>
           <h5 className='font-bold text-4xl'>Stations</h5>

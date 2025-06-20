@@ -20,8 +20,8 @@ function StationCard({obj}) {
         </div>
 
         <div className='flex items-center'>
-          <button className='py-2 px-4 rounded bg-stone-800 font-medium text-stone-100 cursor-pointer shadow-sm transition-all
-                             hover:opacity-80 active:opacity-60'>View Schedule</button>
+          <button className='py-2 px-4 rounded bg-(--primary-color) font-medium text-stone-900 cursor-pointer shadow-sm transition-all
+                             hover:opacity-90 active:bg-[#ecc85c]'>View Schedule</button>
         </div>
 
     </div>

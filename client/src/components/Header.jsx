@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Header() {
+
+const active_class = 'bg-stone-800 text-(--primary-color) ';
+const link_class = 'transition-all underline-offset-4 rounded font-medium flex items-center px-4 py-2 ';
+
+function Header({active_nav}) {
     const links = [
-        <Link key="1" to={'#'} className=' font-medium'>Home</Link>,
-        <Link key="2" to={'#'} className=' font-medium'>Stations</Link>,
-        <Link key="3" to={'#'} className=' font-medium'>Contact</Link>,
-        <Link key="4" to={'#'} className=' font-medium'>About Us</Link>
+        <Link key="1" to={'#'} className={link_class + `${active_nav == "Home"? active_class : 'hover:underline'}`}>Home</Link>,
+        <Link key="2" to={'#'} className={link_class + `${active_nav == "Stations"? active_class : 'hover:underline'}`}>Stations</Link>,
+        <Link key="3" to={'#'} className={link_class + `${active_nav == "Contact"? active_class : 'hover:underline'}`}>Contact</Link>,
+        <Link key="4" to={'#'} className={link_class + `${active_nav == "About"? active_class : 'hover:underline'}`}>About Us</Link>
     ];
 
     return (
@@ -27,7 +31,7 @@ function Header() {
                         </div>
                     </div>
                 </div>
-                <div className='hidden gap-8 sm:flex'>
+                <div className='hidden gap-4 sm:flex'>
                     {links} 
                 </div>       
             </div>
