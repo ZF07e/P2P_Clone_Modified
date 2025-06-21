@@ -7,7 +7,7 @@ function Stations() {
     <>
         <Header active_nav={"Stations"} />
         
-        <div className='flex items-center justify-between'>
+        <div className='flex items-center justify-between px-16 '>
           <h5 className='font-bold text-4xl'>Stations</h5>
           <div>
 
@@ -20,7 +20,7 @@ function Stations() {
         </div>
         
 
-        <div className='mt-12 grid grid-cols-1 gap-2'>
+        <div className='mt-12 grid grid-cols-1 gap-2 px-16 '>
             <StationCard obj={{
               name: "Terminal 1",
               operator: "BBL",

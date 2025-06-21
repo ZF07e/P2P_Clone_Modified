@@ -7,14 +7,14 @@ const link_class = 'transition-all underline-offset-4 rounded font-medium flex i
 
 function Header({active_nav}) {
     const links = [
-        <Link key="1" to={'#'} className={link_class + `${active_nav == "Home"? active_class : 'hover:underline'}`}>Home</Link>,
-        <Link key="2" to={'#'} className={link_class + `${active_nav == "Stations"? active_class : 'hover:underline'}`}>Stations</Link>,
+        <Link key="1" to={'/'} className={link_class + `${active_nav == "Home"? active_class : 'hover:underline'}`}>Home</Link>,
+        <Link key="2" to={'/Stations'} className={link_class + `${active_nav == "Stations"? active_class : 'hover:underline'}`}>Stations</Link>,
         <Link key="3" to={'#'} className={link_class + `${active_nav == "Contact"? active_class : 'hover:underline'}`}>Contact</Link>,
         <Link key="4" to={'#'} className={link_class + `${active_nav == "About"? active_class : 'hover:underline'}`}>About Us</Link>
     ];
 
     return (
-        <div className='bg-(--primary-color) fixed top-0 left-0 right-0 h-18 flex items-center px-4 sm:px-8 py-4 justify-between'>
+        <div className='bg-(--primary-color) fixed top-0 left-0 right-0 h-18 flex items-center px-4 sm:px-8 py-4 justify-between z-100'>
             <div>
                 <Link key="1" to={'#'} className='flex items-center hover:underline transition-all'>
                     <img src="./src/assets/P2P-Logo.png" alt="" className='w-12' />

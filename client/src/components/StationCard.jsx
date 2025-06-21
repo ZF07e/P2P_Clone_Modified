@@ -2,7 +2,7 @@ import React from 'react'
 
 function StationCard({obj}) {
   return (
-    <div className='px-8 py-4 shadow-sm bg-stone-100 flex justify-between'>
+    <div className='p-4 shadow-sm bg-stone-100 flex justify-between'>
         <div className='flex items-center'>
 
           <div className='relative'>
