@@ -49,7 +49,7 @@ function Footer({active_page}) {
             </div>
         </div>
 
-        <div className='col-span-4 flex items-end lg:mt-20'>
+        <div className='col-span-4 flex items-end lg:mt-16'>
             <p className='text-sm'>©2025 P2P Bus Philippines</p>
         </div>
 
