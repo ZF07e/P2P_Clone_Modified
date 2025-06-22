@@ -4,11 +4,13 @@ import './index.css'
 import App from './App.jsx'
 import Stations from './pages/Stations.jsx';
 import Home from './pages/Home.jsx';
+import Contact from './pages/Contact.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {path: "/", element: <Home />},
-  {path: "/stations", element: <Stations />}
+  {path: "/stations", element: <Stations />},
+  {path: "/contact", element: <Contact />}
 ]);
 
 createRoot(document.getElementById('root')).render(

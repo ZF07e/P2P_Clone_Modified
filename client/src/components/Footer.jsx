@@ -7,8 +7,8 @@ const links_class = 'flex flex-col gap-2 mt-2 text-stone-700 hover:cursor-pointe
 function Footer({active_page}) {
 
   const footer_nav = [<Link key={1} className={`${active_page == 'About'? 'hidden': 'hover:underline'}`} to={""}>About Us</Link>,
-                      <Link key={2} className={`${active_page == 'Contact'? 'hidden': 'hover:underline'}`} to={""}>Contact</Link>,
-                      <Link key={3} className={`${active_page == 'Stations'? 'hidden': 'hover:underline'}`} to={"/Stations"}>Stations</Link>,
+                      <Link key={2} className={`${active_page == 'Contact'? 'hidden': 'hover:underline'}`} to={"/contact"}>Contact</Link>,
+                      <Link key={3} className={`${active_page == 'Stations'? 'hidden': 'hover:underline'}`} to={"/stations"}>Stations</Link>,
                       <Link key={4} className={`${active_page == 'Home'? 'hidden': 'hover:underline'}`} to={"/"}>Home</Link>
                      ];
   return (
