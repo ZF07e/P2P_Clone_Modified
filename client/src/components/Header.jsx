@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../assets/P2P-Logo.png'
 
 const active_class = 'bg-stone-800 text-(--primary-color) ';
 const link_class = 'transition-all underline-offset-4 rounded font-medium flex items-center px-4 py-2 ';
@@ -17,7 +17,7 @@ function Header({active_nav}) {
         <div className='bg-(--primary-color) fixed top-0 left-0 right-0 h-18 flex items-center px-4 sm:px-8 py-4 justify-between z-100'>
             <div>
                 <Link key="1" to={'#'} className='flex items-center hover:underline transition-all'>
-                    <img src="./src/assets/P2P-Logo.png" alt="" className='w-12' />
+                    <img src={logo} alt="" className='w-12' />
                     <h5 className="font-bold text-xl text-nowrap">P2P BUS PH.</h5>
                 </Link>
             </div>

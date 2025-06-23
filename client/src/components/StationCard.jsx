@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
 function StationCard({obj}) {
   return (
@@ -13,15 +14,20 @@ function StationCard({obj}) {
           </div>
 
           <div className='ms-4'>
-            <h4 className='font-medium text-2xl flex items-center gap-2'>{obj.name} <span className='font-normal text-base'>{`• ${obj.operator}`}</span></h4>
+            <h4 className='font-medium text-2xl flex items-center gap-2'>
+              <Link to={"#"} className='select-none cursor-pointer hover:underline'>
+                {obj.name} <span className='font-normal text-base'>{`• ${obj.operator}`}</span>
+              </Link>
+            </h4>
             <div>{obj.address}</div>
           </div>
-
         </div>
 
         <div className='flex items-center'>
           <button className='py-2 px-4 rounded bg-(--primary-color) font-medium text-stone-900 cursor-pointer shadow-sm transition-all
-                             hover:opacity-90 active:bg-[#ecc85c]'>View Schedule</button>
+                             hover:opacity-90 active:bg-[#ecc85c] select-none'>
+                      <Link to={"#"}>View Schedule</Link>               
+          </button>
         </div>
 
     </div>
