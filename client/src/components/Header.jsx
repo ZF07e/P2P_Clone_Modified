@@ -14,7 +14,7 @@ function Header({active_nav}) {
     ];
 
     return (
-        <div className='bg-(--primary-color) fixed top-0 left-0 right-0 h-18 flex items-center px-4 sm:px-8 py-4 justify-between z-100'>
+        <nav className='bg-(--primary-color) fixed top-0 left-0 right-0 h-18 flex items-center px-4 sm:px-8 py-4 justify-between z-100'>
             <div>
                 <Link key="1" to={'#'} className='flex items-center hover:underline transition-all'>
                     <img src={logo} alt="" className='w-12' />
@@ -35,7 +35,7 @@ function Header({active_nav}) {
                     {links} 
                 </div>       
             </div>
-        </div>
+        </nav>
     )
 }
 
