@@ -2,11 +2,11 @@ import React from 'react'
 import Header from '../components/Header.jsx';
 import StationCard from '../components/StationCard.jsx';
 
+
 function Stations() {
   return (
     <>
         <Header active_nav={"Stations"} />
-        
         <div className='flex items-center justify-between px-16 '>
           <h5 className='font-bold text-4xl'>Stations</h5>
           <div>
@@ -20,10 +20,22 @@ function Stations() {
         </div>
         
 
-        <div className='mt-12 grid grid-cols-1 gap-2 px-16 '>
+        <div className='mt-12 grid grid-cols-1 gap-3 px-16 '>
             <StationCard obj={{
               name: "Terminal 1",
               operator: "BBL",
+              address: "Calamba City, 4027 Laguna"
+            }} />
+
+            <StationCard obj={{
+              name: "Terminal 2",
+              operator: "RRCG",
+              address: "Calamba City, 4027 Laguna"
+            }} />
+
+            <StationCard obj={{
+              name: "Terminal 3",
+              operator: "Calamba P2P",
               address: "Calamba City, 4027 Laguna"
             }} />
         </div>
