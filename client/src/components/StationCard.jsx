@@ -3,12 +3,12 @@ import {Link} from 'react-router-dom';
 
 function StationCard({obj}) {
   return (
-    <div className='p-4 shadow-sm bg-stone-100 flex justify-between cursor-pointer 
+    <Link to={"/stations/test"} className='p-2 shadow-sm bg-stone-100 flex justify-between cursor-pointer 
                     hover:-translate-x-1 hover:-translate-y-0.5 hover:shadow-md/20 
                     active:bg-stone-200 transition-all duration-200'>
         <div className='flex items-center'>
           <div className='relative'>
-            <img src="./src/assets/Sample-img.jpeg" alt="" className='w-44 h-full' />
+            <img src="../src/assets/terminal.png" alt="" className='w-20 h-full' />
               {/* <div className="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center font-medium bg-stone-100/40 select-none opacity-0 hover:opacity-100 transition-all cursor-pointer">
                 View in Map
               </div> */}
@@ -16,22 +16,14 @@ function StationCard({obj}) {
 
           <div className='ms-4'>
             <h4 className='font-medium text-xl flex items-center gap-2'>
-              <Link to={"#"} className='select-none cursor-pointer hover:underline'>
+              <div className='select-none cursor-pointer hover:underline'>
                 {obj.name} <span className='font-normal text-base'>{`• ${obj.operator}`}</span>
-              </Link>
+              </div>
             </h4>
             <div>{obj.address}</div>
           </div>
         </div>
-{/* 
-        <div className='flex items-center'>
-          <button className='py-2 px-4 rounded bg-(--primary-color) font-medium text-stone-900 cursor-pointer shadow-sm transition-all
-                             hover:opacity-90 active:bg-[#ecc85c] select-none'>
-                      <Link to={"#"}>View Schedule</Link>               
-          </button>
-        </div> */}
-
-    </div>
+    </Link>
   )
 }
 

@@ -5,13 +5,13 @@ import App from './App.jsx'
 import Stations from './pages/Stations.jsx';
 import Home from './pages/Home.jsx';
 import Contact from './pages/Contact.jsx';
-import _Station from './pages/_Station.jsx';
+import _Station_Info from './pages/Station_Profile.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {path: "/", element: <Home />},
   {path: "/stations", element: <Stations />},
-  {path: "/stations/:id", element: <_Station />},
+  {path: "/stations/:id", element: <_Station_Info />},
   {path: "/contact", element: <Contact />}
 ]);
 

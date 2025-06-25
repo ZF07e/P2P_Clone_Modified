@@ -8,13 +8,12 @@ function Home() {
   return (
     <>
         <Header active_nav={"Home"} />
-
-        <section className='h-dvh'>
-            <div className='w-full bg-stone-100 flex flex-col items-center py-2 select-none gap-4'>
-                <img src="./src/assets/bus-image1.png" alt="" className='w-[32%]' />
+        <section className='h-dvh '>
+            <div className='w-full flex flex-col items-center select-none'>
+                <img src="./src/assets/bus-stop.png" alt="" className='w-[32%]' />
             </div>
 
-            <div className='text-center mt-8'>
+            <div className='text-center mt-4'>
                 <h5 className='font-black text-4xl select-none text-(--dark-color)'>P2P BUS PHILIPPINES.</h5>
                 <p className='font-medium text-sm text-stone-800'>A premium point-to-point bus service in the Philippines</p>
             </div>
@@ -36,7 +35,7 @@ function Home() {
         </section>
 
         <section className="bg-stone-100 h-dvh flex justify-evenly items-center px-16">
-            <MapContainer center={[14.449548, 481.025391]} zoom={8} className='h-120 w-120 z-1'>
+            <MapContainer center={[14.449548, 481.025391]} zoom={8} scrollWheelZoom={false} className='h-120 w-120 z-1'>
                 <TileLayer attribution='<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'>
 
                 </TileLayer>
