@@ -22,7 +22,7 @@ function Header({active_nav}) {
                 </Link>
             </div>
             <div>   
-                <div className='sm:hidden'>
+                <div className='md:hidden'>
                     <div className='px-2 py-3 rounded border border-(--primary-color) hover:border-(--dark-color) active:bg-stone-600/10 transition-all'>
                         <div className='w-7 h-5 flex flex-col justify-center gap-1'>
                             <span className='w-full h-1 bg-stone-900'></span>
@@ -31,7 +31,7 @@ function Header({active_nav}) {
                         </div>
                     </div>
                 </div>
-                <nav className='hidden gap-4 sm:flex'>
+                <nav className='hidden gap-4 md:flex'>
                     {links} 
                 </nav>       
             </div>

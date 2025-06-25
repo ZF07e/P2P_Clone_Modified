@@ -16,7 +16,7 @@ function Station_Profile() {
                 <div className='p-2 shadow-sm bg-stone-100 flex justify-between cursor-pointer'>
                   <div className='flex items-center'>
                     <div className='relative'>
-                      <img src="../src/assets/Sample-img.jpeg" alt="" className='w-36 h-full' />
+                      <img src="../src/assets/terminal.png" alt="" className='w-20 h-full' />
                     </div>
                     <div className='ms-4'>
                       <h4 className='font-medium text-xl flex items-center gap-2'>
