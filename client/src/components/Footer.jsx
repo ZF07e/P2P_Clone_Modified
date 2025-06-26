@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import logo from '../assets/P2P-Logo1.png'
 
 const links_class = 'flex flex-col gap-2 mt-2 text-stone-700 hover:cursor-pointer';
 
@@ -12,13 +13,13 @@ function Footer({active_page}) {
                       <Link key={4} className={`${active_page == 'Home'? 'hidden': 'hover:underline'}`} to={"/"}>Home</Link>
                      ];
   return (
-    <footer className='w-full bg-stone-200 grid grid-cols-[25%_25%_25%_25%] grid-rows-[0.5fr_1fr_auto_auto] gap-y-8 pt-8 pb-4 px-4
+    <footer className='w-full bg-stone-200 grid grid-cols-[25%_25%_25%_25%] grid-rows-[0.5fr_1fr_auto_auto] gap-y-8 pt-8 pb-4 px-4 text-(--dark-color)
                        md:grid-cols-4 md:grid-rows-[0.5fr_1fr_auto]
                        lg:grid-cols-[1fr_0.5fr_0.5fr_1fr] lg:grid-rows-[1fr_auto] lg:gap-4'>
 
         <div className='flex col-span-4 lg:col-span-1'>
             <div className=''>
-                <img src="./src/assets/P2P-Logo.png" alt="" className='w-16 lg:w-20' />
+                <img src={logo} alt="" className='me-2 w-16' />
             </div>
             <div>
                 <h5 className='font-bold text-xl'>P2P BUS PH.</h5>

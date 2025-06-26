@@ -2,10 +2,12 @@ import React from 'react'
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import RouteCard from '../components/RouteCard.jsx';
-import StationCard from '../components/StationCard.jsx';
 import { MapContainer, TileLayer } from 'react-leaflet';
+import { useParams } from 'react-router-dom';
 
 function Station_Profile() {
+  let param = useParams();
+
   return (
     <>
         <Header active_nav={"Stations"} />
@@ -16,7 +18,7 @@ function Station_Profile() {
                 <div className='p-2 shadow-sm bg-stone-100 flex justify-between cursor-pointer'>
                   <div className='flex items-center'>
                     <div className='relative'>
-                      <img src="../src/assets/terminal.png" alt="" className='w-20 h-full' />
+                      <img src="../src/assets/p2pin.png" alt="" className='w-20 h-full' />
                     </div>
                     <div className='ms-4'>
                       <h4 className='font-medium text-xl flex items-center gap-2'>
@@ -44,10 +46,7 @@ function Station_Profile() {
                 <h5 className="font-medium text-lg">Routes</h5>
               </div>
               <div className='grid grid-cols-1 gap-3 mt-2'>
-                <RouteCard />
-                <RouteCard />
-                <RouteCard />
-                <RouteCard />
+                <RouteCard StationID={param.id} />
               </div>
             </div>
         </section>

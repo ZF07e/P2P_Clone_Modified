@@ -3,6 +3,7 @@ import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import "leaflet/dist/leaflet.css";
 import {MapContainer, Popup, TileLayer, Marker} from 'react-leaflet';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -48,7 +49,7 @@ function Home() {
             <div className='flex flex-col gap-4 order-3'>
                 <p className=''>P2P buses offer convenient access to key destinations without the hassle of multiple stops.</p>
                 <div>
-                    <button className='px-8 py-2 font-medium bg-(--dark-color) text-(--primary-color) rounded'>View Stations</button>
+                    <Link to={'/stations'} className='px-8 py-2 font-medium bg-(--dark-color) text-(--primary-color) rounded'>View Stations</Link>
                 </div>
             </div>
         </section>  
