@@ -1,6 +1,7 @@
 import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import TimeCard from '../components/TimeCard.jsx';
 
 const btn_animation = `hover:shadow-md/40 
                        hover:-translate-y-1 
@@ -12,10 +13,10 @@ function PointRoute() {
   return (
     <>
         <Header active_nav={"Stations"} />
-        <main className='md:px-12'>
-          <section>
+        <main className='md:px-12 mb-16'>
+          <section className='mx-2'>
             <div>
-              <button className='font-medium hover:underline cursor-pointer'>Go Back</button>
+              <button className='font-medium hover:underline cursor-pointer active:opacity-40'>Go Back</button>
             </div>
           </section>
 
@@ -39,22 +40,32 @@ function PointRoute() {
 
           <hr />
 
-          <section>
-            <div>
-              <div>
-                <h5>Departure</h5>
-              </div>
-              <div>
-                <p>{'{Schedule}'}</p>
-                <p>{'{Time - Time}'}</p>
-              </div>
+          <section className='grid grid-cols-2 grid-rows-1 my-2 bg-stone-100 px-4 py-1 text-(--dark-color)'>
+            <div className='my-auto'>
+              <h5 className='font-medium text-lg'>Departure</h5>
+            </div>
+            <div className='ms-auto text-end'>
+              <p>{'{Schedule}'}</p>
+              <p>{'{Time - Time}'}</p>
             </div>
           </section>
 
-          <section>
-            {/* Time List */}
+          <section className='mx-2'>
+            <table className='w-full border-separate border-spacing-2'>
+              <tbody className='gap-2'>
+                <TimeCard time={"10:10 AM"} />
+                <TimeCard time={"10:10 AM"} />
+                <TimeCard time={"10:10 AM"} />
+                <TimeCard time={"10:10 AM"} />
+                <TimeCard time={"10:10 AM"} />
+                <TimeCard time={"10:10 AM"} />
+              </tbody>
+            </table>
+            
           </section>
         </main>
+
+        <Footer active_page={"Stations"} />
     </>
   )
 }
