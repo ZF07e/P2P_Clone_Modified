@@ -20,17 +20,13 @@ function Home() {
             </div>
 
             <div className='text-center'>
-                <div className=''>
-                    <div>
-                        <p className='ms-1 font-medium'>Find routes</p>
-                        {/* <img src="" alt="" /> */}
-                        <select type="text" list='route_list' defaultValue={""} className='rounded py-2 border-1 focus:outline-0 w-[80%] sm:w-[70%] md:w-[50%]'>
-                            <option className='text-stone-300' value="" disabled >Select a route</option>
-                            <option value="">Terminal 1</option>
-                            <option value="">Terminal 2</option>
-                            <option value="">Terminal 3</option>
-                        </select>
-                    </div> 
+                <div className='mt-4'>
+                    <select type="text" list='route_list' defaultValue={""} className='rounded py-2 border-1 focus:outline-0 w-[80%] sm:w-[70%] md:w-[50%] font-medium'>
+                        <option className='text-stone-300' value="" disabled >Select a route</option>
+                        <option value="">Terminal 1</option>
+                        <option value="">Terminal 2</option>
+                        <option value="">Terminal 3</option>
+                    </select>
                 </div>
             </div>
         </section>
