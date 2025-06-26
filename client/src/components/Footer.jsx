@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import logo from '../assets/P2P-Logo1.png'
 
 const links_class = 'flex flex-col gap-2 mt-2 text-stone-700 hover:cursor-pointer';
 
@@ -18,7 +19,7 @@ function Footer({active_page}) {
 
         <div className='flex col-span-4 lg:col-span-1'>
             <div className=''>
-                <img src="./src/assets/P2P-Logo.png" alt="" className='w-16 lg:w-20' />
+                <img src={logo} alt="" className='w-16 lg:w-20' />
             </div>
             <div>
                 <h5 className='font-bold text-xl'>P2P BUS PH.</h5>

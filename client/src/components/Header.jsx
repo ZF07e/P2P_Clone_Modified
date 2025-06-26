@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/P2P-Logo.png'
+import logo from '../assets/P2P-Logo1.png'
 
 const active_class = 'bg-stone-800 text-(--primary-color) ';
 const link_class = 'transition-all underline-offset-4 rounded font-medium flex items-center px-4 py-2 ';
