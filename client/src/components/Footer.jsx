@@ -19,7 +19,7 @@ function Footer({active_page}) {
 
         <div className='flex col-span-4 lg:col-span-1'>
             <div className=''>
-                <img src={logo} alt="" className='mx-2 w-16' />
+                <img src={logo} alt="" className='me-2 w-16' />
             </div>
             <div>
                 <h5 className='font-bold text-xl'>P2P BUS PH.</h5>
