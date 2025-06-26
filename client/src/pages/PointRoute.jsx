@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TimeCard from '../components/TimeCard.jsx';
+import { Link, useParams } from 'react-router-dom';
 
 const btn_animation = `hover:shadow-md/40 
                        hover:-translate-y-1 
@@ -10,13 +11,14 @@ const btn_animation = `hover:shadow-md/40
                        transition-all`;
 
 function PointRoute() {
+  let station = useParams();
   return (
     <>
         <Header active_nav={"Stations"} />
         <main className='md:px-12 mb-16'>
           <section className='mx-2'>
             <div>
-              <button className='font-medium hover:underline cursor-pointer active:opacity-40'>Go Back</button>
+              <Link to={`/stations/${station.id}`} className='font-medium hover:underline cursor-pointer active:opacity-40'>Go Back</Link>
             </div>
           </section>
 

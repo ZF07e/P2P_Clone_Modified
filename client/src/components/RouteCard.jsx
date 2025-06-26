@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function RouteCard() {
+function RouteCard({StationID, RouteID}) {
   return (
-    <div className='w-full bg-stone-100 p-2 cursor-pointer
+    <Link to={`/stations/${StationID}/${RouteID}`} className='w-full bg-stone-100 p-2 cursor-pointer
                     hover:-translate-x-1 hover:-translate-y-0.5 hover:shadow-md/20
                     active:bg-stone-200 transition-all duration-200'>
         <div className='flex items-center gap-2'>
             <div>
-                <img src="../src/assets/route1.png" className='w-18' alt="" />
+                <img src="../src/assets/pin2pin.png" className='w-18' alt="" />
             </div>
             <div className='grid grid-cols-2 w-full'>
                 <div>
@@ -22,7 +23,7 @@ function RouteCard() {
         <div>
 
         </div>
-    </div>
+    </Link>
   )
 }
 
