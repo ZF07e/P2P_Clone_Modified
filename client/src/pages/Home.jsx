@@ -8,23 +8,24 @@ function Home() {
   return (
     <>
         <Header active_nav={"Home"} />
-        <section className='h-dvh '>
-            <div className='w-full flex flex-col items-center select-none'>
-                <img src="./src/assets/bus-stop.png" alt="" className='w-[32%]' />
+        <section className='h-dvh grid grid-cols-1 grid-rows-[1fr_auto_1fr] md:px-12'>
+
+            <div className='select-none mt-auto'>
+                <img src="./src/assets/bus-stop1.png" alt="" className='w-100 aspect-square mx-auto' />
             </div>
 
-            <div className='text-center mt-4'>
+            <div className='text-center'>
                 <h5 className='font-black text-4xl select-none text-(--dark-color)'>P2P BUS PHILIPPINES.</h5>
                 <p className='font-medium text-sm text-stone-800'>A premium point-to-point bus service in the Philippines</p>
             </div>
 
-            <div className='mt-8'>
-                <div className='flex justify-center'>
+            <div className='text-center'>
+                <div className=''>
                     <div>
                         <p className='ms-1 font-medium'>Find routes</p>
                         {/* <img src="" alt="" /> */}
-                        <select type="text" list='route_list' className='rounded w-sm py-2 border-1 focus:outline-0'>
-                            <option className='text-stone-300' value="" disabled>Select a route</option>
+                        <select type="text" list='route_list' defaultValue={""} className='rounded py-2 border-1 focus:outline-0 w-[80%] sm:w-[70%] md:w-[50%]'>
+                            <option className='text-stone-300' value="" disabled >Select a route</option>
                             <option value="">Terminal 1</option>
                             <option value="">Terminal 2</option>
                             <option value="">Terminal 3</option>
@@ -34,16 +35,22 @@ function Home() {
             </div>
         </section>
 
-        <section className="bg-stone-100 h-dvh flex justify-evenly items-center px-16">
-            <MapContainer center={[14.449548, 481.025391]} zoom={8} scrollWheelZoom={false} className='h-120 w-120 z-1'>
+        <section className="bg-stone-100 h-dvh w-full p-8 gap-4 grid grid-cols-1 grid-rows-[1fr_auto_1fr] 
+                            sm:grid-rows-[1fr_1fr] sm:grid-cols-[1fr_0.5fr]
+                            md:gap-x-12 md:px-12 md:gap-y-0 
+                            ">
+            <MapContainer center={[14.449548, 481.025391]} zoom={8} scrollWheelZoom={false} className='z-1 order-2 sm: sm:order-1 sm:row-span-2 aspect-3/2 my-auto rounded'>
                 <TileLayer attribution='<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'>
 
                 </TileLayer>
             </MapContainer>
 
-            <div className='flex flex-col gap-4'>
-                <h5 className='font-black text-(--dark-color) text-2xl w-md'>With over (n) Stations across Metro Manila and nearby Provinces</h5>
-                <p className='w-sm'>P2P buses offer convenient access to key destinations without the hassle of multiple stops.</p>
+            <div className='order-1 md:order-2 mt-auto'>
+                <h5 className='font-black text-(--dark-color) text-2xl'>With over (n) Stations across Metro Manila and nearby Provinces</h5>
+            </div>
+
+            <div className='flex flex-col gap-4 order-3'>
+                <p className=''>P2P buses offer convenient access to key destinations without the hassle of multiple stops.</p>
                 <div>
                     <button className='px-8 py-2 font-medium bg-(--dark-color) text-(--primary-color) rounded'>View Stations</button>
                 </div>
