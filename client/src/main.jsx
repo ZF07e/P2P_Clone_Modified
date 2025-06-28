@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx';
 import Contact from './pages/Contact.jsx';
 import _Station_Info from './pages/Station_Profile.jsx';
 import PointRoute from './pages/PointRoute.jsx'
+import About from './pages/About.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
   {path: "/stations", element: <Stations />},
   {path: "/stations/:id", element: <_Station_Info />},
   {path: "/stations/:id/:routeId", element: <PointRoute />},
-  {path: "/contact", element: <Contact />}
+  {path: "/contact", element: <Contact />},
+  {path: "/about", element: <About />}
 ]);
 
 createRoot(document.getElementById('root')).render(
