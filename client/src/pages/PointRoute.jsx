@@ -18,7 +18,8 @@ function PointRoute() {
         <main className='md:px-12 mb-16'>
           <section className='mx-2'>
             <div>
-              <Link to={`/stations/${station.id}`} className='font-medium hover:underline cursor-pointer active:opacity-40'>Go Back</Link>
+              <Link to={`/stations/${station.id}`} className='font-medium hover:underline cursor-pointer active:opacity-40'>
+              <span className="material-symbols-outlined text-sm! text-justify">arrow_back_ios</span>Go Back</Link>
             </div>
           </section>
 
