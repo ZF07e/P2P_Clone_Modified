@@ -10,7 +10,7 @@ function Header({active_nav}) {
         <Link key="1" to={'/'} className={link_class + `${active_nav == "Home"? active_class : 'hover:underline'}`}>Home</Link>,
         <Link key="2" to={'/stations'} className={link_class + `${active_nav == "Stations"? active_class : 'hover:underline'}`}>Stations</Link>,
         <Link key="3" to={'/contact'} className={link_class + `${active_nav == "Contact"? active_class : 'hover:underline'}`}>Contact</Link>,
-        <Link key="4" to={'#'} className={link_class + `${active_nav == "About"? active_class : 'hover:underline'}`}>About Us</Link>
+        <Link key="4" to={'/about'} className={link_class + `${active_nav == "About"? active_class : 'hover:underline'}`}>About Us</Link>
     ];
 
     return (
