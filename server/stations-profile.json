@@ -1,28 +1,32 @@
 {
-    "terminals": [
+    "stations": [
             {
                 "id": 1,
                 "terminalName": "Calamba Turbina Bus Terminal",
                 "address": "Calamba City, 4027 Laguna",
-                "location": [14.185327, 481.135635]
+                "location": [14.185327, 481.135635],
+                "operator": "Calamba P2P"
             },
             {
                 "id": 2,
                 "terminalName": "Nuvali Transport Terminal",
                 "address": "Solenad 2 Shopping Mall Santa Rosa-Tagaytay Road Don Jose Santa Rosa 4026 Laguna, 4026 Santa Rosa - Tagaytay Rd, Silang, Cavite",
-                "location": [14.236617, 481.055447]
+                "location": [14.236617, 481.055447],
+                "operator": "TAS Trans Corp"
             },
             {
                 "id": 3,
                 "terminalName": "District Imus Cavite",
                 "address": "Daang Hari Road, cor Aguinaldo Hwy, Imus, Cavite",
-                "location": [14.370315, 480.938841]
+                "location": [14.370315, 480.938841],
+                "operator": "TAS Trans Corp"
             },
             {
                 "id": 4,
                 "terminalName": "PureGold Noveleta",
                 "address": "Magdiwang Hwy, Noveleta, Cavite",
-                "location": [14.430038, 480.883459]
+                "location": [14.430038, 480.883459],
+                "operator": "TAS Trans Corp"
             }
     ]
 }

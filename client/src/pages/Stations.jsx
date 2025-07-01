@@ -1,9 +1,18 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 import Header from '../components/Header.jsx';
 import StationCard from '../components/StationCard.jsx';
-
+import axios from 'axios';
 
 function Stations() {
+  const [stations, setStations] = useState([]);
+  const fetchAPI = async ()=>{
+    const response = await axios.get('http://localhost:3000/api/stations');
+    setStations(response.data.stations);
+  }  
+  useEffect(()=>{
+    fetchAPI();
+  }, []);
+
   return (
     <>
         <Header active_nav={"Stations"} />
@@ -18,26 +27,20 @@ function Stations() {
               </div>
             </div>
           </div>
-          
+
 
           <div className='mt-4 grid grid-cols-1 gap-3'>
-              <StationCard obj={{
-                name: "Terminal 1",
-                operator: "BBL",
-                address: "Calamba City, 4027 Laguna"
-              }} />
 
-              <StationCard obj={{
-                name: "Terminal 2",
-                operator: "RRCG",
-                address: "Calamba City, 4027 Laguna"
-              }} />
+              {
+                stations.map((e)=>
+                  <StationCard key={e.id} obj={{
+                    name: e.terminalName,
+                    operator: e.operator,
+                    address: e.terminalName
+                  }} />
+                )
+              }
 
-              <StationCard obj={{
-                name: "Terminal 3",
-                operator: "Calamba P2P",
-                address: "Calamba City, 4027 Laguna"
-              }} />
           </div>
         </section>
     </>
