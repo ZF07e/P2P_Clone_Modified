@@ -27,6 +27,13 @@
                 "address": "Magdiwang Hwy, Noveleta, Cavite",
                 "location": [14.430038, 480.883459],
                 "operator": "TAS Trans Corp"
+            },
+            {
+                "id": 5,
+                "terminalName": "BGC Market Market Center",
+                "address": "Parking lot, Taguig City, Metro Manila",
+                "location": [14.547434014964464, 481.0560331387106],
+                "operator": "Calamba P2P"
             }
     ]
 }
