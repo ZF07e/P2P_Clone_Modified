@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const stations = require("./stations-profile.json");
+const routes = require("./stations-route.json");
 const corsOption = {
     origin: "http://localhost:5173"
 }
@@ -15,4 +16,8 @@ app.listen(port, ()=>{
 
 app.get('/api/stations', (req, res)=>{
     res.status(200).send(stations)
+});
+
+app.get('/api/routes', (req, res)=>{
+    res.status(200).send(routes);
 });
