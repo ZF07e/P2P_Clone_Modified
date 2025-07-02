@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function RouteCard({StationID, RouteID}) {
+function RouteCard({obj}) {
+    console.log(obj)
   return (
-    <Link to={`/stations/${StationID}/${RouteID}`} className='w-full bg-stone-100 p-2 cursor-pointer
+    <Link to={`/stations/${obj.start_point}/${obj.id}`} className='w-full bg-stone-100 p-2 cursor-pointer
                     hover:-translate-x-1 hover:-translate-y-0.5 hover:shadow-md/20
                     active:bg-stone-200 transition-all duration-200'>
         <div className='flex items-center gap-2'>
@@ -12,11 +13,11 @@ function RouteCard({StationID, RouteID}) {
             </div>
             <div className='grid grid-cols-2 w-full'>
                 <div>
-                    <h5 className="font-medium text-md">{"{Terminal 1} - {Terminal 2}"}</h5>
+                    <h5 className="font-medium text-md">{`${obj.start_point} - ${obj.end_point}`}</h5>
                 </div>
                 <div className='flex flex-col ms-auto'>
-                    <p className='text-sm'>{'Monday - Friday'}</p>
-                    <p className='text-sm'>{'6:00 AM - 5:00 PM'}</p>
+                    <p className='text-sm'>{obj.schedule}</p>
+                    <p className='text-sm'>{`${obj.departure_time[0]} - ${obj.departure_time[obj.departure_time.length - 1]}`}</p>
                 </div>
             </div>
         </div>
