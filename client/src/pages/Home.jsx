@@ -1,9 +1,23 @@
-import React from 'react'
+import { useState } from 'react'
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import "leaflet/dist/leaflet.css";
-import {MapContainer, Popup, TileLayer, Marker} from 'react-leaflet';
+import {MapContainer, Popup, TileLayer, Marker, useMapEvents} from 'react-leaflet';
 import { Link } from 'react-router-dom';
+
+function SHOWLAT(){
+    const [position, setPosition] = useState();
+    const map = useMapEvents({
+        click(e){
+            map.locate();
+            console.log(e.latlng)
+        },
+
+    });
+
+    console.log(position);
+
+}
 
 function Home() {
   return (
@@ -36,10 +50,12 @@ function Home() {
                             sm:grid-rows-[1fr_1fr] sm:grid-cols-[1fr_0.5fr]
                             md:gap-x-12 md:px-12 md:gap-y-0 
                             ">
-            <MapContainer center={[14.449548, 481.025391]} zoom={8} scrollWheelZoom={false} className='z-1 order-2 sm: sm:order-1 sm:row-span-2 aspect-3/2 my-auto rounded'>
+            <MapContainer center={[14.449548, 481.025391]} zoom={8} className='z-1 order-2 sm: sm:order-1 sm:row-span-2 aspect-3/2 my-auto rounded'>
                 <TileLayer attribution='<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'>
 
                 </TileLayer>
+
+                <SHOWLAT />
             </MapContainer>
 
             <div className='order-1 md:order-2 mt-auto'>
