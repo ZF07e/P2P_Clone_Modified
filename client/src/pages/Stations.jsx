@@ -16,7 +16,7 @@ function Stations() {
   return (
     <>
         <Header active_nav={"Stations"} />
-        <section className='mx-4 sm:mx-8 md:mx-12 lg:mx-16'>
+        <section className='mx-4 sm:mx-8 md:mx-12 lg:mx-16 mb-16'>
           <div className='grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4'>
             <h5 className='font-bold text-4xl'>Stations</h5>
 

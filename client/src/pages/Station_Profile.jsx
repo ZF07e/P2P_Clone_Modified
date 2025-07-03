@@ -35,7 +35,6 @@ function Station_Profile() {
           obj.terminalName == station_param.id);
 
     setStation(searched_station);
-    
   }
   
   const fetch_routes = async ()=>{
@@ -50,8 +49,7 @@ function Station_Profile() {
     }))
   }
 
-
-
+  // fetch data when page is rendered
   useEffect(()=>{
     fetch_station();
     fetch_routes();
@@ -60,8 +58,6 @@ function Station_Profile() {
         map.setView(station.location, 8);
     }
   }, []);
-
-  console.log(routes)
 
   return (
     <>
