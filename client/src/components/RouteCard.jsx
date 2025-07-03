@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function RouteCard({obj}) {
-    console.log(obj)
   return (
     <Link to={`/stations/${obj.start_point}/${obj.id}`} className='w-full bg-stone-100 p-2 cursor-pointer
                     hover:-translate-x-1 hover:-translate-y-0.5 hover:shadow-md/20
