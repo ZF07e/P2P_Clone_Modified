@@ -27,14 +27,10 @@ function Station_Profile() {
 
   // Anonymous Function
   const fetch_station = async ()=>{
-    const response = await axios.get('http://localhost:3000/api/stations');
-    const stations = response.data.stations;
-    
-    // Searches the station in an array of station data.
-    const searched_station = stations.find(obj => 
-          obj.terminalName == station_param.id);
+    const response = await axios.get(`http://localhost:3000/api/stations/${station_param.id}`);
+    const stations = response.data;
 
-    setStation(searched_station);
+    setStation(stations);
   }
   
   const fetch_routes = async ()=>{
@@ -58,6 +54,7 @@ function Station_Profile() {
         map.setView(station.location, 8);
     }
   }, []);
+
 
   return (
     <>
