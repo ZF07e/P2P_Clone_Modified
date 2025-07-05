@@ -16,7 +16,9 @@ app.listen(port, ()=>{
 })
 
 app.get('/api/stations', (req, res)=>{
-    res.status(200).send(stations)
+    const station_array = stations.stations;
+    station_array.sort((a, b)=>a.terminalName.localeCompare(b.terminalName));
+    res.status(200).send(station_array)
 });
 
 app.get('/api/routes', (req, res)=>{
