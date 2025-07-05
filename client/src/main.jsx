@@ -12,8 +12,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 const router = createBrowserRouter([
   {path: "/", element: <Home />},
   {path: "/stations", element: <Stations />},
-  {path: "/stations/:id", element: <_Station_Info />},
-  {path: "/stations/:id/:routeId", element: <PointRoute />},
+  {path: "/stations/:station_name", element: <_Station_Info />},
+  {path: "/stations/:station_name/:route_id", element: <PointRoute />},
   {path: "/contact", element: <Contact />},
   {path: "/about", element: <About />}
 ]);
