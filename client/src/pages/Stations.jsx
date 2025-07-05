@@ -7,7 +7,7 @@ function Stations() {
   const [stations, setStations] = useState([]);
   const fetchAPI = async ()=>{
     const response = await axios.get('http://localhost:3000/api/stations');
-    setStations(response.data.stations);
+    setStations(response.data);
   }  
   useEffect(()=>{
     fetchAPI();
