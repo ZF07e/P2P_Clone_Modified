@@ -35,16 +35,19 @@ function Station_Profile() {
   
   const fetch_routes = async ()=>{
     // Gets the route API
-    const response = await axios.get('http://localhost:3000/api/routes');
-    const routes_list = response.data.routes;
+    const response = await axios.post('http://localhost:3000/api/routes', 
+      {
+        station: station_param.station_name
+      }
+    );
+    const routes_list = response.data;
 
     // Get route based on the station name
-    const station_route = routes_list.find(obj => 
-          obj.start_point === station_param.station_name);
-
-    setRoutes(Array(station_route).map((obj)=>{
-      return <RouteCard key={obj.id} obj={obj} />
-    }))
+    if(routes_list){
+      setRoutes(Array(routes_list).map((obj)=>{
+        return <RouteCard key={obj.id} obj={obj} />
+      }))
+    }
   }
 
   // fetch data when page is rendered
