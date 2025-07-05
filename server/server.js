@@ -21,11 +21,6 @@ app.get('/api/stations', (req, res)=>{
     res.status(200).send(station_array)
 });
 
-app.get('/api/routes', (req, res)=>{
-    res.status(200).send(routes);
-});
-
-
 // Dynamic routing
 app.get('/api/stations/:station_name', (req, res)=>{
     const {station_name} = req.params;
@@ -54,4 +49,11 @@ app.post('/routes/swap', (req, res)=>{
     const swapping_route = route_array.find((obj) => obj.id == end_route_ID && obj.end_id == start_route_ID);
 
     res.status(200).send(swapping_route)
+});
+
+app.post('/api/routes', (req, res)=>{
+    const { station } = req.body;
+    const station_routes = routes.routes.find((obj)=>obj.start_point == station);
+
+    res.status(200).send(station_routes);
 });
