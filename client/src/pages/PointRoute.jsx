@@ -46,7 +46,7 @@ function PointRoute() {
     setup_departure_array(response.data);
   }
 
-   useState(()=>{
+   useEffect(()=>{
       fetch_route_time();
    }, []);
 
