@@ -13,6 +13,65 @@
                 "address": "Parking lot, Taguig City, Metro Manila",
                 "location": [14.547434014964464, 481.0560331387106],
                 "operator": "Calamba P2P"
+            },
+            {
+                "id": 3,
+                "terminalName": "Alabang Town Center Terminal",
+                "address": "Alabang-Zapote Road corner Madrigal Avenue, Muntinlupa City, Metro Manila",
+                "location": [14.424027432738217, 481.03175408750184],
+                "operator": "RRCG"
+            },
+            {
+                "id": 4,
+                "terminalName": "Ayala Malls South Park Terminal",
+                "address": "South Park district, Muntinlupa, Metro Manila",
+                "location": [14.4123221765795, 481.04646850282273],
+                "operator": "RRCG"
+            },
+            {
+                "id": 5,
+                "terminalName": "Baguio Terminal",
+                "address": "Gov. Pack Rd, Baguio, Benguet Terminal",
+                "location": [16.410075036156446, 480.5984797522724],
+                "operator": "Solid North"
+            },
+            {
+                "id": 6,
+                "terminalName": "Pag-asa Lawton Terminal",
+                "address": "Bahayang Pag-asa Street, Barangay Pag-asa, Imus City, Cavite 4103, Philippines",
+                "location": [16.410075036156446, 480.5984797522724],
+                "operator": "Calamba P2P"
+            },
+            {
+                "id": 7,
+                "terminalName": "Parañaque Integrated Terminal Exchange (PITx)",
+                "address": "#1 Kennedy Road, Barangay Tambo, Asiaworld, Parañaque City, Metro Manila",
+                "location": [14.5099573310363, 480.99148313093343],
+                "operator": "Solid North"
+            },
+            {
+                "id": 8,
+                "terminalName": "Makati Glorietta 3",
+                "address": "Parkway Dr, Makati City, Metro Manila",
+                "location": [14.552283852592037, 481.02509665680867],
+                "operator": "Calamba P2P"
+            },
+            {
+                "id": 9,
+                "terminalName": "Greenbelt 1",
+                "address": "Paseo de Roxas, Makati City, Metro Manila",
+                "location": [14.553597433866853, 481.020917633079],
+                "operator": "RRCG"
+            },
+            {
+                "id": 10,
+                "terminalName": "Greenhills Center Terminal",
+                "address": "Lifestyle Center, Greenhills Shopping Mall, San Juan City, Metro Manila",
+                "location": [14.553597433866853, 481.020917633079],
+                "operator": "RRCG"
             }
+
+
+            
     ]
 }
