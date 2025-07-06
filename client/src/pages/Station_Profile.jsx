@@ -37,7 +37,7 @@ function Station_Profile() {
     // Gets the route API
     const response = await axios.post('http://localhost:3000/api/routes', 
       {
-        station: station_param.station_name
+        stationID: station.id
       }
     );
     const routes_list = response.data;

@@ -52,8 +52,8 @@ app.post('/routes/swap', (req, res)=>{
 });
 
 app.post('/api/routes', (req, res)=>{
-    const { station } = req.body;
-    const station_routes = routes.routes.find((obj)=>obj.start_point == station);
+    const { stationID } = req.body;
+    const station_routes = routes.routes.find((obj)=>obj.id == stationID);
 
     res.status(200).send(station_routes);
 });
