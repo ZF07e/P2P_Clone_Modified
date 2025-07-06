@@ -24,12 +24,20 @@ app.get('/api/stations', (req, res)=>{
 // Dynamic routing
 app.get('/api/stations/:station_name', (req, res)=>{
     const {station_name} = req.params;
-    const station_array = stations.stations;
-    const selected_station = station_array.find((obj)=> obj.terminalName == station_name);
+    const selected_station = stations.stations.find((obj)=> obj.terminalName == station_name);
+    const station_routes = [];
+    routes.routes.map((obj)=>{
+        if(obj.start_point == selected_station.terminalName){
+            station_routes.push(obj);
+        }
+    });
+
+    selected_station.routes = Array.isArray(station_routes)? station_routes: Array(station_routes) ;
 
     res.status(200).send(selected_station);
 });
 
+// For route page rendering
 app.get('/api/routes/:routeID', (req, res)=>{
     const {routeID} = req.params;
     const route_array = routes.routes;
@@ -38,6 +46,7 @@ app.get('/api/routes/:routeID', (req, res)=>{
     res.status(200).send(selected_route);
 });
 
+// For swaping routes to see departure time
 app.post('/routes/swap', (req, res)=>{
     const {start_route_ID, end_route_ID} = req.body;
     const route_array = routes.routes;
@@ -49,11 +58,4 @@ app.post('/routes/swap', (req, res)=>{
     const swapping_route = route_array.find((obj) => obj.id == end_route_ID && obj.end_id == start_route_ID);
 
     res.status(200).send(swapping_route)
-});
-
-app.post('/api/routes', (req, res)=>{
-    const { stationID } = req.body;
-    const station_routes = routes.routes.find((obj)=>obj.id == stationID);
-
-    res.status(200).send(station_routes);
 });
