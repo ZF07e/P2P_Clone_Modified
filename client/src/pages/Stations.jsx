@@ -30,7 +30,6 @@ function Stations() {
 
 
           <div className='mt-4 grid grid-cols-1 gap-3'>
-
               {
                 stations.map((e)=>
                   <StationCard key={e.id} obj={{
@@ -40,7 +39,6 @@ function Stations() {
                   }} />
                 )
               }
-
           </div>
         </section>
     </>
