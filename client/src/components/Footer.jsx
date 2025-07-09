@@ -37,7 +37,7 @@ function Footer({active_page}) {
         <div className='col-span-2 md:col-span-1'>
             <h5 className={'font-medium'}>Legal & Compilance</h5>
             <div className={links_class}>
-                <Link className="hover:underline" to={""}>Privacy Policy</Link>
+                <Link className="hover:underline" to={"/privacy"}>Privacy Policy</Link>
             </div>
         </div>
 
