@@ -59,7 +59,6 @@ function Home() {
         <Header active_nav={"Home"} />
         <section className='grid grid-rows-[auto_auto_1fr] gap-4 py-4'>
 
-
             <div className='bg-[url(src/assets/manila.jpg)] bg-center bg-cover py-32'>
                 <div className='flex items-center justify-center gap-2 bg-stone-900/50 py-2 text-stone-100'>   
                     <img src="./src/assets/P2P-Logo-Light.png" alt="" className='aspect-square w-18' />
@@ -73,25 +72,23 @@ function Home() {
                 
             <div className='px-4'>
                 <hr className='text-(--dark-color)' />
-                <div className='grid grid-cols-1 grid-rows-3 text-center mx-4 md:grid-rows-1 md:grid-cols-3 gap-4 mt-4 text-(--dark-color)'>
+
+                <div className='grid grid-cols-1 grid-rows-3 text-center my-20 gap-40 mx-4 md:grid-rows-1 md:grid-cols-3 md:gap-8 text-(--dark-color) md:my-8'>
 
                     <div>
-                        <div>
-                            <img src="./src/assets/icon1.png" className='aspect-square w-20 mx-auto' alt="" />
-                            <h4 className='font-medium'>Faster, Non-Stop Commute</h4>
+                        <div className=''>
+                            <h4 className='font-medium text-lg border-b '>Faster, Non-Stop Commute</h4>
                         </div>
                     </div>
                     <div>
-                        <div>
-                            <img src="./src/assets/icon2.png" className='aspect-square w-20 mx-auto' alt="" />
-                            <h4 className='font-medium'>Guaranteed Seating & Comfort</h4>
+                        <div className=''>
+                            <h4 className='font-medium text-lg border-b '>Guaranteed Seating & Comfort</h4>
                         </div>
                     </div>
 
                     <div>
-                        <div>  
-                            <img src="./src/assets/icon3.png" className='aspect-square w-20 mx-auto' alt="" /> 
-                            <h4 className='font-medium'>Reliable Schedule</h4>
+                        <div className=''>   
+                            <h4 className='font-medium text-lg border-b '>Reliable Schedule</h4>
                         </div>
                     </div>
                 </div>
