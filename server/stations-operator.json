@@ -2,18 +2,28 @@
     "Operators" : [
         {
             "id": "o1",
-            "operator_name": "Calamba P2P",
-            "operator_image": "p2p_calamba"            
+            "name": "Calamba P2P",
+            "image_name": "p2p_calamba.png"            
         },
         {
             "id": "o2",
-            "operator_name": "RRCG",
-            "operator_image": "rrcg"            
+            "name": "RRCG",
+            "image_name": "rrcg.jpeg"            
         },
         {
             "id": "o3",
-            "operator_name": "Solid North",
-            "operator_image": "solid_north"            
-        }        
+            "name": "Solid North",
+            "image_name": "solid_north.png"            
+        },
+        {
+            "id": "o4",
+            "name": "Ube Express",
+            "image_name": "ubelogo.png"            
+        },
+        {
+            "id": "o5",
+            "name": "Metro Express",
+            "image_name": "metro_express.jpg"            
+        }           
     ]
 }
