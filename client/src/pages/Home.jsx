@@ -2,21 +2,18 @@ import { useState, useEffect } from 'react'
 import axios from 'axios';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
+import OperatorCard from '../components/OperatorCard.jsx';
 import "leaflet/dist/leaflet.css";
 import {MapContainer, Popup, TileLayer, Marker, useMapEvents} from 'react-leaflet';
 import { Link } from 'react-router-dom';
 
 function SHOWLAT(){
-    const [position, setPosition] = useState();
     const map = useMapEvents({
         click(e){
             map.locate();
             console.log(e.latlng)
         },
-
     });
-
-    console.log(position);
 }
 
 function customIcon(_iconsize){
@@ -29,14 +26,15 @@ function customIcon(_iconsize){
 }
 
 function Home() {
+    let host = "http://localhost:3000";
     const [marks, setMarks] = useState([]);
+    const [operators, setOperators] = useState([]);
 
     const Markings = async ()=>{
-        const response = await axios.get('http://localhost:3000/api/stations');
+        const response = await axios.get(`${host}/api/stations`);
         const stations = response.data;
 
         setMarks(stations.map((obj, idx)=>{
-            console.log(obj)
             return <Marker key={idx} position={obj.location} icon={customIcon()}>
                 <Popup>
                     <div className='text-center w-full '>
@@ -50,8 +48,21 @@ function Home() {
         }));
     }
 
+    const Operators = async ()=>{
+        const response = await axios.get(`${host}/api/operators`);
+        const operators = response.data
+        const operators_card = [];
+
+        operators.map((obj, idx)=>{
+            operators_card.push(<OperatorCard operator_name={obj.name} image_name={obj.image_name} />)
+        });
+
+        setOperators(operators_card);
+    }
+
     useEffect(()=>{
         Markings();
+        Operators();
     },[])
 
     return (
@@ -76,18 +87,18 @@ function Home() {
                 <div className='grid grid-cols-1 grid-rows-3 text-center my-20 gap-40 mx-4 md:grid-rows-1 md:grid-cols-3 md:gap-8 text-(--dark-color) md:my-8'>
 
                     <div>
-                        <div className=''>
+                        <div className='py-8'>
                             <h4 className='font-medium text-lg border-b '>Faster, Non-Stop Commute</h4>
                         </div>
                     </div>
                     <div>
-                        <div className=''>
+                        <div className='py-8'>
                             <h4 className='font-medium text-lg border-b '>Guaranteed Seating & Comfort</h4>
                         </div>
                     </div>
 
                     <div>
-                        <div className=''>   
+                        <div className='py-8'>   
                             <h4 className='font-medium text-lg border-b '>Reliable Schedule</h4>
                         </div>
                     </div>
@@ -121,10 +132,12 @@ function Home() {
             </div>
         </section>  
 
-        <section className='py-8 px-16 flex flex-col justify-center items-center'>
+        <section className='py-8 px-16 mb-16 flex flex-col justify-center items-center'>
             <h5 className='font-black text-(--dark-color) text-2xl'>Meet Our Operators</h5>
             <p className='mt-2'>Get to know the trusted bus companies behind our point-to-point routes</p>
-            <div className="grid grid-cols-3"></div>
+            <div className="grid grid-cols-[1fr_1fr_1fr] w-full gap-4 mt-4">
+                {operators}
+            </div>
         </section>
 
         <Footer active_page={'Home'} />
