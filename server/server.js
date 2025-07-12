@@ -66,7 +66,11 @@ app.get('/api/operators', (req, res)=>{
     const filtered_array = [];
 
     operators_array.forEach((obj, idx)=>{
-        console.log(obj)
+        filtered_array.push({
+            name: obj.name,
+            image_name: obj.image_name
+        })
     });
 
+    res.status(200).send(filtered_array);
 });
