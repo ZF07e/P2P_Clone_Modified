@@ -84,22 +84,32 @@ function Home() {
             <div className='px-4'>
                 <hr className='text-(--dark-color)' />
 
-                <div className='grid grid-cols-1 grid-rows-3 text-center my-20 gap-40 mx-4 md:grid-rows-1 md:grid-cols-3 md:gap-8 text-(--dark-color) md:my-8'>
+                <div className='grid grid-cols-1 grid-rows-4 text-center my-20 gap-40 mx-4 md:grid-rows-1 md:grid-cols-4 md:gap-8 text-(--dark-color) md:my-8'>
 
                     <div>
-                        <div className='py-8'>
-                            <h4 className='font-medium text-lg border-b '>Faster, Non-Stop Commute</h4>
+                        <div className='py-8 anim_slideIn'>
+                            <h4 className='font-medium text-lg border-b '>Fast, Non-Stop Travel</h4>
+                            <p className='text-sm'>Terminal-to-terminal routes mean faster trips with no stopovers or transfers.</p>
                         </div>
                     </div>
                     <div>
                         <div className='py-8'>
                             <h4 className='font-medium text-lg border-b '>Guaranteed Seating & Comfort</h4>
+                            <p className='text-sm'>Every ride includes a reserved seat, air-conditioning, and onboard amenities like Wi‑Fi and CCTV.</p>
                         </div>
                     </div>
 
                     <div>
                         <div className='py-8'>   
-                            <h4 className='font-medium text-lg border-b '>Reliable Schedule</h4>
+                            <h4 className='font-medium text-lg border-b '>On-Time Departures</h4>
+                            <p className='text-sm'>Buses leave on schedule, regardless of passenger count—great for time-sensitive commuters.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div className='py-8'>   
+                            <h4 className='font-medium text-lg border-b '>Accessible for All</h4>
+                            <p className='text-sm'>Equipped for PWDs, seniors, and even bicycles—offering inclusive, commuter-friendly transport.</p>
                         </div>
                     </div>
                 </div>
@@ -112,7 +122,7 @@ function Home() {
                             sm:grid-rows-[1fr_1fr] sm:grid-cols-[1fr_0.5fr]
                             md:gap-x-12 md:px-12 md:gap-y-0 
                             ">
-            <MapContainer center={[14.449548, 481.025391]} zoom={7} className='z-1 order-2 sm: sm:order-1 sm:row-span-2 aspect-3/2 my-auto rounded'>
+            <MapContainer center={[14.449548, 481.025391]} zoom={10} className='z-1 order-2 sm: sm:order-1 sm:row-span-2 aspect-3/2 my-auto rounded'>
                 <TileLayer attribution='<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'>
 
                 </TileLayer>

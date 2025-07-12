@@ -31,6 +31,86 @@
             "end_point": "Calamba Turbina Bus Terminal",
             "schedule": "Monday - Friday",
             "departure_time": ["06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM", "09:00 PM"]
+        },
+        {   
+            "id": "r5",
+            "end_id": "r6",
+            "start_point": "Calamba Turbina Bus Terminal",
+            "end_point": "Makati Glorietta 3",
+            "schedule": "Monday - Friday",
+            "departure_time": ["04:00 AM", "05:00 AM", "06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM"]
+        },
+        {   
+            "id": "r6",
+            "end_id": "r5",
+            "start_point": "Makati Glorietta 3",
+            "end_point": "Calamba Turbina Bus Terminal",
+            "schedule": "Monday - Friday",
+            "departure_time": ["06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM", "09:00 PM"]
+        },
+        {   
+            "id": "r7",
+            "end_id": "r8",
+            "start_point": "Baguio Terminal",
+            "end_point": "Parañaque Integrated Terminal Exchange (PITx)",
+            "schedule": "Monday - Sunday",
+            "departure_time": ["01:00 AM", "02:00 AM", "03:00 AM", "04:00 AM", "05:00 AM", "06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "11:30 AM", "12:30 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM", "09:00 PM", "10:00 PM", "11:00 PM", "12:00 AM"]
+        },
+        {   
+            "id": "r8",
+            "end_id": "r7",
+            "start_point": "Parañaque Integrated Terminal Exchange (PITx)",
+            "end_point": "Baguio Terminal",
+            "schedule": "Monday - Sunday",
+            "departure_time": ["01:00 AM", "02:00 AM", "03:00 AM", "04:00 AM", "05:00 AM", "06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "11:30 AM", "12:30 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM", "09:00 PM", "10:00 PM", "11:00 PM", "12:00 AM"]
+        },
+        {   
+            "id": "r9",
+            "end_id": "r10",
+            "start_point": "Alabang Town Center Terminal",
+            "end_point": "Greenbelt 1",
+            "schedule": "Monday - Friday",
+            "departure_time": ["05:30 AM", "06:00 AM", "06:30 AM", "07:00 AM", "07:30 AM", "08:00 AM", "08:30 AM", "09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM", "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM", "05:00 PM", "05:30 PM", "06:00 PM", "06:30 PM", "07:00 PM", "07:30 PM", "08:00 PM", "08:30 PM", "09:00 PM", "09:30 PM"]
+        },
+        {   
+            "id": "r10",
+            "end_id": "r9",
+            "start_point": "Greenbelt 1",
+            "end_point": "Alabang Town Center Terminal",
+            "schedule": "Monday - Friday",
+            "departure_time": ["06:30 AM", "07:00 AM", "07:30 AM", "08:00 AM", "08:30 AM", "09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM", "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM", "05:00 PM", "05:30 PM", "06:00 PM", "06:30 PM", "07:00 PM", "07:30 PM", "08:00 PM", "08:30 PM", "09:00 PM", "09:30 PM", "10:00 PM"]
+        },
+        {   
+            "id": "r11",
+            "end_id": "r12",
+            "start_point": "Alabang Town Center Terminal",
+            "end_point": "Greenhills",
+            "schedule": "Monday - Friday",
+            "departure_time": ["06:00 AM", "07:00 AM", "10:00 AM", "11:00 AM"]
+        },
+        {   
+            "id": "r12",
+            "end_id": "r11",
+            "start_point": "Greenhills",
+            "end_point": "Alabang Town Center Terminal",
+            "schedule": "Monday - Friday",
+            "departure_time": ["11:00 AM", "06:00 PM", "07:00 PM"]
+        },
+        {   
+            "id": "r13",
+            "end_id": "r14",
+            "start_point": "Ayala Malls South Park Terminal",
+            "end_point": "Greenbelt 1",
+            "schedule": "Monday - Friday",
+            "departure_time": ["06:00 AM", "06:45 AM", "07:15 AM", "08:00 AM"]
+        },
+        {   
+            "id": "r14",
+            "end_id": "r13",
+            "start_point": "Greenbelt 1",
+            "end_point": "Ayala Malls South Park Terminal",
+            "schedule": "Monday - Friday",
+            "departure_time": ["05:30 PM"," 06:30 PM"," 07:30 PM"]
         }
     ]
 }

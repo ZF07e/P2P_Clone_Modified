@@ -16,7 +16,7 @@ function Header({active_nav}) {
     return (
         <header className='bg-(--primary-color) fixed top-0 left-0 right-0 h-18 flex items-center px-4 sm:px-8 py-4 justify-between z-100 text-(--dark-color)'>
             <div>
-                <Link key="1" to={'#'} className='flex items-center hover:underline transition-all'>
+                <Link key="1" to={'/'} className='flex items-center hover:underline transition-all'>
                     <img src={logo} alt="" className='w-12 me-2' />
                     <h5 className="font-bold text-xl text-nowrap">P2P BUS PH.</h5>
                 </Link>
