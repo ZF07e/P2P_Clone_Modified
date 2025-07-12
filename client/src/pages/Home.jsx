@@ -54,7 +54,7 @@ function Home() {
         const operators_card = [];
 
         operators.map((obj, idx)=>{
-            operators_card.push(<OperatorCard operator_name={obj.name} image_name={obj.image_name} />)
+            operators_card.push(<OperatorCard key={idx} operator_name={obj.name} image_name={obj.image_name} />)
         });
 
         setOperators(operators_card);
