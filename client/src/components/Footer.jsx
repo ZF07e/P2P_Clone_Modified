@@ -44,9 +44,12 @@ function Footer({active_page}) {
         <div className='col-span-4 md:col-span-1'>
             <h5 className={'font-medium'}>Socials</h5>
             <div className="flex gap-4">
-                <Link to={""}>Link</Link>
-                <Link to={""}>Link</Link>
-                <Link to={""}>Link</Link>
+                <Link to={"https://www.facebook.com/p2pbus/"}>
+                    <img src="./src/assets/facebook.png" className='aspect-square w-5'  alt="" />
+                </Link>
+                <Link to={"https://x.com/p2pbus"}>
+                    <img src="./src/assets/x.png" className='aspect-square w-5'  alt="" />
+                </Link>
             </div>
         </div>
 
