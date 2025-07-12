@@ -1,0 +1,19 @@
+{
+    "Operators" : [
+        {
+            "id": "o1",
+            "operator_name": "Calamba P2P",
+            "operator_image": "p2p_calamba"            
+        },
+        {
+            "id": "o2",
+            "operator_name": "RRCG",
+            "operator_image": "rrcg"            
+        },
+        {
+            "id": "o3",
+            "operator_name": "Solid North",
+            "operator_image": "solid_north"            
+        }        
+    ]
+}
