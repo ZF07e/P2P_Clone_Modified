@@ -60,7 +60,7 @@ function Home() {
         <section className='grid grid-rows-[auto_auto_1fr] gap-4 py-4'>
 
 
-            <div className='bg-[url(src/assets/manila.jpg)] bg-center bg-cover py-32'>
+            <div className='bg-[url(src/assets/manila.jpg)] bg-center bg-cover py-40'>
                 <div className='flex items-center justify-center gap-2 bg-stone-900/50 py-2 text-stone-100'>   
                     <img src="./src/assets/P2P-Logo-Light.png" alt="" className='aspect-square w-18' />
                     <div>
@@ -68,7 +68,6 @@ function Home() {
                         <p className='font-medium text-sm'>A premium point-to-point bus service in the Philippines</p>
                     </div>            
                 </div>
-
             </div>
                 
             <div className='px-4'>

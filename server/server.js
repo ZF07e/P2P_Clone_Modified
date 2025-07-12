@@ -4,6 +4,7 @@ const app = express();
 const port = 3000;
 const stations = require("./stations-profile.json");
 const routes = require("./stations-route.json");
+const operators = require("./stations-operator.json");
 const corsOption = {
     origin: "http://localhost:5173"
 }
@@ -58,4 +59,14 @@ app.post('/routes/swap', (req, res)=>{
     const swapping_route = route_array.find((obj) => obj.id == end_route_ID && obj.end_id == start_route_ID);
 
     res.status(200).send(swapping_route)
+});
+
+app.get('/api/operators', (req, res)=>{
+    const operators_array = operators.Operators;
+    const filtered_array = [];
+
+    operators_array.forEach((obj, idx)=>{
+        console.log(obj)
+    });
+
 });
